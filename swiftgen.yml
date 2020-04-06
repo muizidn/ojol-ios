@@ -1,0 +1,17 @@
+fonts:
+  inputs: Sources/Ojol/Fonts
+  outputs:
+    templateName: swift4
+    output: Sources/Ojol/Fonts.swift
+colors:
+  inputs: Sources/Ojol/colors.txt
+  outputs:
+    templateName: swift4
+    output: Sources/Ojol/Colors.swift
+xcassets:
+  inputs: 
+    - Sources/Ojol/Assets.xcassets
+    - Sources/Ojol/Figma.xcassets
+  outputs:
+    - templateName: swift4
+      output: Sources/Ojol/Assets.swift

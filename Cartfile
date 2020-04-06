@@ -1,0 +1,13 @@
+github "ReactiveX/RxSwift" ~> 5.0.1
+github "muizidn/viewdsl" "0.0.6"
+github "hackiftekhar/IQKeyboardManager" "v6.4.0"
+github "CosmicMind/Material" "3.1.8"
+github "roberthein/TinyConstraints" "4.0.1"
+github "JonasGessner/JGProgressHUD"
+github "xmartlabs/XLPagerTabStrip" ~> 9.0
+github "kishikawakatsumi/KeychainAccess" "v3.2.0"
+github "pondok-programmer/PinCodeTextField"
+github "onevcat/Kingfisher"
+github "AssistoLab/DropDown"
+github "getsentry/sentry-cocoa" "4.4.1"
+

@@ -1,0 +1,71 @@
+name: Ojol
+configFiles:
+  Debug: temp/Config.xconfig
+  Release: temp/Config.xconfig
+options:
+  usesTabs: false
+  indentWidth: 4
+  tabWidth: 4
+  deploymentTarget:
+    iOS: 12.0
+targets:
+  Ojol:
+    type: application
+    platform: iOS
+    entitlements:
+      path: Ojol.entitlements
+    sources:
+      - path: Sources/Ojol
+        includes:
+          - "**/*.swift"
+          - "**/*.xib"
+          - "**/*.xib"
+          - "*.xcdatamodeld"
+          - "**/*.xcassets"
+          - "*.plist"
+          - "**/*.storyboard"
+          - "**/*.ttf"
+          - "**/*.mov"
+      - "demo-video.mov"
+    settings:
+      INFOPLIST_FILE: Sources/Ojol/Info.plist
+      CURRENT_PROJECT_VERSION: $(APP_BUILD_NUMBER)
+      TARGETED_DEVICE_FAMILY: 1
+      SWIFT_OBJC_BRIDGING_HEADER: Sources/Ojol/Ojol-Bridging-Header.h
+      VERSIONING_SYSTEM: apple-generic
+      DEBUG_INFORMATION_FORMAT: dwarf-with-dsym
+      ENABLE_BITCODE: NO
+    dependencies:
+        - carthage: IQKeyboardManager
+        - carthage: RxCocoa
+        - carthage: RxRelay
+        - carthage: RxSwift
+        - carthage: ViewDSL
+        - carthage: TinyConstraints
+        - carthage: JGProgressHUD
+        - carthage: XLPagerTabStrip
+        - carthage: KeychainAccess
+        - carthage: Material
+        - carthage: Motion
+        - carthage: SocketIO
+        - carthage: Starscream
+        - carthage: Chatto
+        - carthage: ChattoAdditions
+        - carthage: PinCodeTextField
+        - carthage: Kingfisher
+        - carthage: DropDown
+        - carthage: Sentry
+    scheme:
+      testTargets:
+        - OjolUITests
+      environmentVariables:
+        DYLD_PRINT_STATISTICS: 1
+  OjolUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: 
+      - path: Tests/OjolUITests
+      - fastlane/SnapshotHelper.swift
+    settings:
+      PRODUCT_NAME: OjolUITests
+      TEST_TARGET_NAME: Ojol

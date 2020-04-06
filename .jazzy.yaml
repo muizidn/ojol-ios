@@ -1,0 +1,13 @@
+author: Ojol Developer
+copyright: '© 2020 Ojol'
+min_acl: internal
+theme: fullwidth
+readme: README.md
+exclude:
+  -  "*ViewModel.swift"
+  -  "*Navigator.swift"
+  -  "*Coordinator.swift"
+custom_categories:
+  - name: Scenes
+    children:
+      - HomeController
